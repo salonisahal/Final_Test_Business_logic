@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Final_test_Business_Logic",
+    "slug": "finaltestbusinesslogic",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "platforms": ["ios", "android", "web"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.generated.finaltestbusinesslogic"
+    },
+    "android": {
+      "package": "com.generated.finaltestbusinesslogic",
+      "softwareKeyboardLayoutMode": "pan"
+    }
+  }
+}
