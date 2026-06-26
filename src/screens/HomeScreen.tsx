@@ -22,7 +22,7 @@ export default function HomeScreen() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  const animations = useRef([new Animated.Value(0), new Animated.Value(0), new Animated.Value(0)]).current;
+  const animations = useRef(Array.from({ length: 4 }, () => new Animated.Value(0))).current;
 
   const loadData = async () => {
     setError('');

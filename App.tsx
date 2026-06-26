@@ -5,10 +5,11 @@ import { Platform, StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { enableScreens } from 'react-native-screens';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { useFonts, Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold } from '@expo-google-fonts/inter';
 import { RootNavigator } from './src/navigation';
 import { AppProvider } from './src/components/AppProvider';
+import { colors } from './src/theme/colors';
 
 enableScreens(Platform.OS !== 'web');
 
@@ -28,11 +29,25 @@ export default function App() {
   }, []);
   if (!fontsLoaded && !__fontTimedOut) return null;
 
+  const navigationTheme = {
+    ...DefaultTheme,
+    dark: false,
+    colors: {
+      ...DefaultTheme.colors,
+      primary: colors.primary,
+      background: colors.background,
+      card: colors.surface,
+      text: colors.textPrimary,
+      border: colors.border,
+      notification: colors.accent
+    }
+  };
+
   return (
     <GestureHandlerRootView style={styles.root}>
       <SafeAreaProvider style={styles.root}>
         <AppProvider>
-          <NavigationContainer>
+          <NavigationContainer theme={navigationTheme}>
             <RootNavigator />
           </NavigationContainer>
         </AppProvider>

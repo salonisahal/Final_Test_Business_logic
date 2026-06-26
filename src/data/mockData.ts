@@ -11,7 +11,8 @@ export const mockCredentials = {
 const kpis: KPI[] = [
   { id: 'kpi-1', title: 'Active Customers', value: '1,248', trend: '+6.4%' },
   { id: 'kpi-2', title: 'Revenue', value: '$84.2k', trend: '+12.1%' },
-  { id: 'kpi-3', title: 'Projects', value: '68', trend: '+3.1%' }
+  { id: 'kpi-3', title: 'Projects', value: '68', trend: '+3.1%' },
+  { id: 'kpi-4', title: 'User Engagement', value: '76%', trend: '+4.8%' }
 ];
 
 const activities: ActivityItem[] = [
@@ -103,14 +104,16 @@ const baseDailyMetrics: DashboardMetric[] = [
   { id: 'met-1', title: 'Revenue', value: '$4.8k', progress: 0.68, delta: '+4.2%' },
   { id: 'met-2', title: 'Active Users', value: '1,024', progress: 0.74, delta: '+2.3%' },
   { id: 'met-3', title: 'Project Progress', value: '72%', progress: 0.72, delta: '+1.9%' },
-  { id: 'met-4', title: 'Completed Tasks', value: '184', progress: 0.58, delta: '+6.8%' }
+  { id: 'met-4', title: 'Completed Tasks', value: '184', progress: 0.58, delta: '+6.8%' },
+  { id: 'met-5', title: 'User Engagement', value: '76%', progress: 0.66, delta: '+3.9%' }
 ];
 
 const baseMonthlyMetrics: DashboardMetric[] = [
   { id: 'met-1', title: 'Revenue', value: '$68.4k', progress: 0.82, delta: '+11.4%' },
   { id: 'met-2', title: 'Active Users', value: '18,420', progress: 0.76, delta: '+7.9%' },
   { id: 'met-3', title: 'Project Progress', value: '88%', progress: 0.88, delta: '+5.2%' },
-  { id: 'met-4', title: 'Completed Tasks', value: '2,480', progress: 0.69, delta: '+9.1%' }
+  { id: 'met-4', title: 'Completed Tasks', value: '2,480', progress: 0.69, delta: '+9.1%' },
+  { id: 'met-5', title: 'User Engagement', value: '81%', progress: 0.73, delta: '+6.1%' }
 ];
 
 const profile: UserProfile = {
