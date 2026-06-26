@@ -21,13 +21,7 @@ export default function App() {
     'Inter-Bold': Inter_700Bold
   });
 
-  /* __preview_font_timeout_patch__ */
-  const [__fontTimedOut, __setFontTimedOut] = useState(false);
-  useEffect(() => {
-    const __t = setTimeout(() => __setFontTimedOut(true), 30000);
-    return () => clearTimeout(__t);
-  }, []);
-  if (!fontsLoaded && !__fontTimedOut) return null;
+  if (!fontsLoaded) return null;
 
   const navigationTheme = {
     ...DefaultTheme,
